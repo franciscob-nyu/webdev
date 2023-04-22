@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>RESPONSE #3</title>
+    <style>
+      .grid-container {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 10px;
+        margin: 20px auto;
+        width: 80%;
+        height: auto;
+      }
+
+      .grid-item {
+        position: relative;
+        overflow: hidden;
+        cursor: pointer;
+      }
+
+      .grid-item img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        transition: transform 0.3s ease-in-out;
+      }
+
+      .grid-item:hover img {
+        transform: scale(1.2);
+      }
+
+      .grid-item:hover .overlay {
+        opacity: 1;
+      }
+
+      body {
+        background-color: #000;
+        position: relative;
+      }
+
+      #stars {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+      }
+
+      .star {
+        position: absolute;
+        width: 6px;
+        height: 6px;
+        background-color: #fff;
+        opacity: 0;
+        animation: twinkle 2s infinite;
+      }
+
+      @keyframes twinkle {
+        0% {
+          opacity: 0;
+        }
+        50% {
+          opacity: 1;
+        }
+        100% {
+          opacity: 0;
+        }
+      }
+	  
+		p {
+			font-size: 24px;
+			line-height: 1.5;
+			text-align: justify;
+			margin-bottom: 20px;
+			color: white;
+			font-weight: bold;
+			font-family: Courier New
+		}
+    </style>
+  </head><br><br>
+  <body>
+    <div class="grid-container">
+	
+      <div class="grid-item">
+        <img src="b1.png">
+		
+      </div>
+      <div class="grid-item">
+        <img src="b2.png">
+      </div>
+	  
+      <div class="grid-item">
+        <img src="b3.png">
+      </div>
+	  
+	  <div class="grid-item">
+        <img src="b4.png">
+      </div>
+	  
+		<div class="grid-item">
+        <img src="b5.png">
+      </div>
+	  
+      <div class="grid-item">
+        <img src="b6.png">
+      </div>
+	  
+      <div class="grid-item">
+        <img src="b7.png">
+      </div>
+	  
+	  <div class="grid-item">
+        <img src="b8.png">
+      </div>
+	  
+    </div>
+
+    <p>The Ways of Seeing by John Berger explores how we see and interpret visual images in art and popular culture.<br>
+	Berger argues that our cultural and social contexts shape our vision and understanding of the world.<br>
+	He examines various aspects of visual culture, critiques the Western art canon,<br>and shows how visual images reflect and reinforce dominant social and economic structures.<br>
+	It challenges the idea that seeing is a neutral and objective process, and highlights the ways in which<br>our biases and experiences influence our perception of the world.<br><br><br></p>
+
+    <div id="stars"></div>
+    <script>
+      const starContainer = document.getElementById("stars");
+      for (let i = 0; i < 1000; i++) {
+        const star = document.createElement("div");
+        star.classList.add("star");
+        star.style.left = `${Math.floor(Math.random() * 100)}vw`;
+        star.style.top = `${Math.floor(Math.random() * 100)}vh`;
+        star.style.animationDelay = `${Math.random()}s`;
+        starContainer.appendChild(star);
+      }
+    </script>
+  </body>
+</html>
