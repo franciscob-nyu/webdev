@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>SECRET BUTTONS!!!!!</title>
+	<style>
+		body {
+			background-color: #333;
+			color: #fff;
+			font-family: Comic Sans MS, cursive, sans-serif;
+			text-align: center;
+		}
+
+		h1 {
+			margin-top: 50px;
+			font-size: 2em;
+			text-transform: uppercase;
+			letter-spacing: 0.2em;
+		}
+
+		.buttons {
+			display: grid;
+			grid-template-columns: repeat(3, 100px);
+			grid-template-rows: repeat(3, 100px);
+			gap: 20px;
+			justify-content: center;
+			align-items: center;
+			margin-bottom: 50px;
+		}
+
+		.buttons button {
+			background-color: #FF4136;
+			color: #fff;
+			font-size: 30px;
+			font-weight: bold;
+			border: none;
+			border-radius: 5px;
+			padding: 10px 20px;
+			cursor: pointer;
+			text-transform: uppercase;
+			font-family: "Comic Sans MS", "Comic Sans", cursive;
+			box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+			transition: all 0.2s ease-in-out;
+		}
+
+		.buttons button:hover {
+			background-color: #FF725C;
+			box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5);
+		}
+		
+		.buttons button:active {
+			transform: scale(10) rotate(40deg);
+			background-color: #FFBDB2;
+			box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+		}
+
+	</style>
+</head>
+<body>
+	<h1>Enter secret code!</h1>
+	<div class="buttons">
+		<button id="btn1">1</button>
+		<button id="btn2">2</button>
+		<button id="btn3">3</button>
+		<button id="btn4">4</button>
+		<button id="btn5">5</button>
+		<button id="btn6">6</button>
+		<button id="btn7">7</button>
+		<button id="btn8">8</button>
+		<button id="btn9">9</button>
+	</div>
+
+	<script>
+		let code = []; // !!!! WARNING !!!! don't look below. 
+
+		document.querySelectorAll('.buttons button').forEach(button => {
+			button.addEventListener('click', () => {
+				code.push(button.id.replace('btn', ''));
+				if (code.join('') === '3921') {
+					window.location.href = 'supersecret.htm';
+				} else if (code.length >= 4) {
+					code = [];
+				}
+			});
+		}); //NOOOOOOOOOO
+	</script>
+</body>
+</html>
