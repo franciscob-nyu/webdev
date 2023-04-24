@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>RESPONSE #4 - VINI</title>
+	<link rel="stylesheet" href="4sharif.css">
+</head>
+<body>
+	<div class="top-bar">
+		<a href="4sharif.htm">◆ VINI ◆</a>
+		<a href="4sharif-vidi.htm">VIDI</a>
+		<a href="4sharif-vici.htm">VICI?</a>
+	</div>
+
+	<div class="image-container">
+		<img src="https://www.aljazeera.com/wp-content/uploads/2020/09/7ef68668069c43ea869012e80014e4f4_18.jpeg" class="image" width=200px>
+		<img src="https://i0.wp.com/iranian.com/wp-content/uploads/2019/06/Operation_Karbala_IranIraq_War_pic.jpg" class="image" width=200px>
+		<img src="https://www.cfr.org/sites/default/files/styles/large_s/public/image/2020/07/1980-88_september_iran_iraq_war.jpg" class="image" width=200px>
+	</div>
+
+	<div class="glowing-box">
+		<p>◆◆ ɪ ʟᴏᴏᴋ ᴀᴛ ʜɪs ᴘɪᴄᴛᴜʀᴇ ᴀɴᴅ ᴛʀʏ ᴛᴏ ғᴏʀɢᴇᴛ ◆◆ ʜᴇ ᴅɪᴇᴅ ɪɴ ᴀ ᴡᴀʀ ᴛʜᴀᴛ ᴡᴀs ɴᴏᴛ ʜɪs ◆◆ ʜɪs ᴘᴇʀsᴏɴᴀʟ ᴇғғᴇᴄᴛs ᴀʀᴇ ᴀʟʟ ᴛʜᴀᴛ's ʟᴇғᴛ ◆◆</p>
+	</div>
+
+	<script>
+		const images = document.querySelectorAll('.image');
+
+		function handleImageHover() {
+			this.style.animation = 'image-hover 0.1s ease-in-out infinite';
+		}
+
+		function handleImageLeave() {
+			this.style.animation = 'image-vibrate 1s ease-in-out infinite';
+		}
+
+		images.forEach(image => {
+			image.addEventListener('mouseenter', handleImageHover);
+			image.addEventListener('mouseleave', handleImageLeave);
+		});
+	</script>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>RESPONSE #4 - VICI?</title>
+	<style>
+		body {
+			background-color: black;
+			color: white;
+			font-family: Arial, sans-serif;
+			margin: 0;
+			padding: 0;
+		}
+
+		.top-bar {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			height: 50px;
+			background-color: #666;
+			padding: 0 20px;
+		}
+
+		.top-bar a {
+			color: white;
+			font-size: 18px;
+			text-decoration: none;
+			margin: 0 10px;
+			position: relative;
+		}
+
+		.top-bar a:hover {
+			color: #00ffff;
+			text-shadow: 0 0 10px #00ffff;
+			animation: link-hover 1s ease-in-out infinite;
+		}
+
+		@keyframes link-hover {
+			0% {
+				transform: translateY(0);
+			}
+			50% {
+				transform: translateY(-5px);
+			}
+			100% {
+				transform: translateY(0);
+			}
+		}
+		.glowing-box {
+			background-color: #00ffff;
+			box-shadow: 0 0 20px #00ffff;
+			padding: 20px;
+			margin-top: 50px;
+			text-align: center;
+			animation: box-glow 2s ease-in-out infinite;
+		}
+
+		@keyframes box-glow {
+			0% {
+				box-shadow: 0 0 20px #00ffff;
+			}
+			50% {
+				box-shadow: 0 0 30px #00ffff;
+			}
+			100% {
+				box-shadow: 0 0 20px #00ffff;
+			}
+		}
+	</style>
+</head>
+<body>
+	<div class="top-bar">
+		<a href="4sharif.htm">VINI</a>
+		<a href="4sharif-vidi.htm">◆ VIDI ◆</a>
+		<a href="4sharif-vici.htm">VICI?</a>
+	</div>
+
+		<center><br><br><img src="https://josephimre.files.wordpress.com/2015/09/iran_iraq_war.jpg" width=800></center>
+
+	<div class="glowing-box">
+		<p>◆◆ ɪ ʟᴏᴏᴋ ᴀᴛ ʜɪs ᴘɪᴄᴛᴜʀᴇ ᴀɴᴅ ᴛʀʏ ᴛᴏ ғᴏʀɢᴇᴛ ◆◆ ʜᴇ ᴅɪᴇᴅ ɪɴ ᴀ ᴡᴀʀ ᴛʜᴀᴛ ᴡᴀs ɴᴏᴛ ʜɪs ◆◆ ʜɪs ᴘᴇʀsᴏɴᴀʟ ᴇғғᴇᴄᴛs ᴀʀᴇ ᴀʟʟ ᴛʜᴀᴛ's ʟᴇғᴛ ◆◆</p>
+	</div>
+
+	<script>
+		const images = document.querySelectorAll('.image');
+
+		function handleImageHover() {
+			this.style.animation = 'image-hover 0.1s ease-in-out infinite';
+		}
+
+		function handleImageLeave() {
+			this.style.animation = 'image-vibrate 1s ease-in-out infinite';
+		}
+
+		images.forEach(image => {
+			image.addEventListener('mouseenter', handleImageHover);
+			image.addEventListener('mouseleave', handleImageLeave);
+		});
+	</script>
