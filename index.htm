@@ -43,6 +43,16 @@
 		a:hover {
 			color: #fff;
 		}
+		
+		#nyan-cat {
+			position: absolute;
+			width: 100px;
+			height: 100px;
+			background-image: url('https://vignette3.wikia.nocookie.net/fantendo/images/9/9f/Nyan_cat_animated.gif');
+			background-repeat: no-repeat;
+			background-size: contain;
+			z-index: 9999;
+		}
 	</style>
 </head>
 <body>
@@ -59,5 +69,13 @@
 		<li><a href="/webdev/massage.htm">McLuhan</a></li>
 		<li><a href="/webdev/massage.htm">Final!</a></li>
 	</ul>
+	<div id="nyan-cat"></div>
+	<script>
+		document.addEventListener("mousemove", function(event) {
+		  var nyanCat = document.getElementById("nyan-cat");
+		  nyanCat.style.left = (event.clientX - 100) + "px";
+		  nyanCat.style.top = (event.clientY - 40) + "px";
+		});
+	</script>
 </body>
 </html>
